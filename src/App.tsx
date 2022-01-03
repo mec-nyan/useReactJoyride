@@ -1,24 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import * as React from "react";
+import Joyride from "react-joyride";
 
 function App() {
+  const [state, setState] = React.useState({
+    steps: [
+      {
+        target: "#start",
+        content: "first content",
+      },
+      {
+        target: "#header",
+        content: "first content",
+      },
+      {
+        target: "#myButton",
+        content: "second content",
+      },
+    ],
+    run: false,
+  });
+
+  const start = () => setState((state) => ({ ...state, run: true }));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 id="header">Using react-joyride</h1>
+      <button
+        id="start"
+        style={{
+          fontSize: "1.5em",
+          color: "violet",
+          backgroundColor: "white",
+          border: "1px solid violet",
+          borderRadius: "6px",
+          margin: "20px",
+          padding: "10px",
+          boxSizing: "border-box",
+        }}
+        onClick={start}
+      >
+        Start
+      </button>
+      <button
+        id="myButton"
+        style={{
+          fontSize: "1.5em",
+          color: "white",
+          backgroundColor: "violet",
+          border: "none",
+          margin: "20px",
+          padding: "10px 10px",
+          borderRadius: "6px",
+        }}
+      >
+        A button
+      </button>
+      <Joyride steps={state.steps} run={state.run} continuous={true} />
     </div>
   );
 }

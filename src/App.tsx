@@ -1,6 +1,7 @@
 import "./App.css";
 import * as React from "react";
 import Joyride from "react-joyride";
+import Calculator from "./components/Calculator";
 
 function App() {
   const [state, setState] = React.useState({
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <h1 id="header">Using react-joyride</h1>
+      <Calculator />
       <button
         id="start"
         style={{

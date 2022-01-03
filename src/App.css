@@ -1,3 +1,82 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  margin: 40px;
+}
+
+.pad {
+  display: flex;
+  flex-direction: row;
+}
+
+.display {
+  width: 400px;
+  height: 150px;
+  background-color: #c8c8c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lcd {
+  width: 90%;
+  height: 70%;
+  background-color: #eeeeee;
+}
+
+.numbers {
+  background-color: #d0d0d0;
+  width: 300px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.operators {
+  width: 100px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: #c0c0c0;
+}
+
+.op,
+.equals,
+.num {
+  box-sizing: border-box;
+  color: white;
+  background-color: pink;
+  font-size: 24px;
+  font-weight: bold;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  font-size: 40px;
+  border-top-left-radius: 40% 20%;
+  border-top-right-radius: 40% 20%;
+  border-bottom-left-radius: 40% 20%;
+  border-bottom-right-radius: 40% 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid violet;
+  border-bottom-width: 8px;
+  border-left-width: 4px;
+}
+
+.equals {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  border-radius: 10px;
+  width: 90%;
+  background-color: violet;
+  border-color: purple;
 }

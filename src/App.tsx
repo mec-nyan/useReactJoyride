@@ -8,15 +8,39 @@ function App() {
     steps: [
       {
         target: "#start",
-        content: "first content",
+        content: "Click here to start the joyride again.",
       },
       {
         target: "#header",
-        content: "first content",
+        content: "This is just the header (title).",
       },
       {
         target: "#myButton",
-        content: "second content",
+        content: "And this is just a button. Nothing fancy.",
+      },
+      {
+        target: ".calc",
+        content: "This is your calculator.",
+      },
+      {
+        target: ".display",
+        content: "You'll see the numbers you enter (and the result) here.",
+      },
+      {
+        target: ".pad",
+        content: "Do you happen to know what there are for, by any chances?",
+      },
+      {
+        target: ".numbers",
+        content: "You may be familiar with these: they call'em numbers...",
+      },
+      {
+        target: ".operators",
+        content: "Oh, this are the cool ones!",
+      },
+      {
+        target: ".num:first-child",
+        content: "Use these to enter your numbers, dude",
       },
     ],
     run: false,
